@@ -3,6 +3,22 @@ if not game.modSupport or not game.modSupport.weaponMods then
 	return
 end
 
+function deepCopy(o)
+	if type(o) ~= "table" then
+		return o
+	end
+	
+	local n = {}
+	for k, v in pairs(o) do
+		if type(v) == "table" then
+			n[k] = deepCopy(v)
+		else
+			n[k] = v
+		end
+	end
+	return n
+end
+
 spritesheetParser:parse("textures/bs_mp5sd_ui")
 
 register.newSoundData({
@@ -34,6 +50,11 @@ weapon.uiIconInactive = "hud_wep_mp5sd_inactive"
 weapon.uiIconIdle = "hud_wep_mp5sd_idle"
 weapon.fireSound = "mp5sd_fire"
 weapon.bulletSpeed = 1000
+
+weapon.muzzleFlashShadows = p320.muzzleFlashShadows
+weapon.muzzleflashConfigs = p320.muzzleflashConfigs
+weapon.config = deepCopy(mp5.config)  -- don't modify existing configuration, it would mess up the original mp5
+weapon.config.player.muzzleOffset.side = 4
 
 
 weapons:register(weapon, "mp5")
