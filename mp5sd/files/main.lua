@@ -5,6 +5,20 @@ end
 
 spritesheetParser:parse("textures/bs_mp5sd_ui")
 
+register.newSoundData({
+	name = "mp5sd_fire",
+	sound = {"sounds/mp5sd_fire.ogg"},
+	soundType = "static",
+	fadeDistance = 200, -- at what distance does the sound start fading?
+	maxDistance = 500, -- at what distance + fadeDistance do we no longer hear the sound?
+	looping = false,
+	volume = 0.5,
+	pitchVariance = sounds.genericPitchVariance,
+	volumeType = sound.VOLUME_TYPES.EFFECTS
+}, 
+6 -- how many instances of this sound can be playing at a time?
+)
+
 local weapon = {}
 mp5 = weapons:getData("mp5")
 p320 = weapons:getData("p320")
@@ -18,7 +32,9 @@ weapon.noiseTravelOverride = p320.noiseTravelOverride
 weapon.uiIcon = "hud_wep_mp5sd_active"
 weapon.uiIconInactive = "hud_wep_mp5sd_inactive"
 weapon.uiIconIdle = "hud_wep_mp5sd_idle"
-weapon.fireSound = p320.fireSound
+weapon.fireSound = "mp5sd_fire"
+weapon.bulletSpeed = 1000
+
 
 weapons:register(weapon, "mp5")
 game.getCampaignData("intravenous"):addLoadoutWeapon(weapons.TYPES.PRIMARY, "mp5sd")

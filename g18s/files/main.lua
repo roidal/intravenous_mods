@@ -5,6 +5,20 @@ end
 
 spritesheetParser:parse("textures/bs_glock18s_ui")
 
+register.newSoundData({
+	name = "glock18s_fire",
+	sound = {"sounds/glock19s_fire.ogg"},
+	soundType = "static",
+	fadeDistance = 100, -- at what distance does the sound start fading?
+	maxDistance = 400, -- at what distance + fadeDistance do we no longer hear the sound?
+	looping = false,
+	volume = 0.5,
+	pitchVariance = sounds.genericPitchVariance,
+	volumeType = sound.VOLUME_TYPES.EFFECTS
+}, 
+6 -- how many instances of this sound can be playing at a time?
+)
+
 local g18s = {}
 local usp = weapons:getData("usp")
 
@@ -12,7 +26,7 @@ g18s.id = "glock18s"
 g18s.name = _T("WEAPON_NAME_GLOCK18S", "Glock-18 S")
 g18s.trivia = _T("WEAPON_NAME_GLOCK18S_TRIVIA", "Silenced version of Glock-18")
 g18s.NPC = false
-g18s.fireSound = usp.fireSound
+g18s.fireSound = "glock18s_fire"
 g18s.noiseChange = usp.noiseChange
 g18s.noiseRadius = usp.noiseRadius * 1.2
 g18s.config = usp.config
