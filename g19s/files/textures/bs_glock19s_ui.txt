@@ -1,0 +1,3 @@
+hud_wep_glock19s_active = 0 1 65 30
+hud_wep_glock19s_idle = 0 71 65 30
+hud_wep_glock19s_inactive = 0 37 65 30
