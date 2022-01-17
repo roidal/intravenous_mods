@@ -4,14 +4,15 @@ if not game.modSupport or not game.modSupport.weaponMods then
 end
 
 local g18p = {}
+local g18 = weapons:getData("glock18")
 
 g18p.id = "glock18p"
 g18p.trivia = _T("WEAPON_NAME_GLOCK18P_TRIVIA", "Glock-18C for the Primary Slot")
 g18p.NPC = false
 g18p.unique = false
 g18p.type = weapons.TYPES.PRIMARY
-g18p.maxAmmo = 90
-g18p.ammoOnGive = 90
+g18p.maxAmmo = g18.magSize * 4
+g18p.ammoOnGive = g18p.maxAmmo
 
 weapons:register(g18p, "glock18")
 game.getCampaignData("intravenous"):addLoadoutWeapon(weapons.TYPES.PRIMARY, "glock18p")
