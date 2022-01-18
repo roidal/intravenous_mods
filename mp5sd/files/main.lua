@@ -49,6 +49,7 @@ weapon.uiIcon = "hud_wep_mp5sd_active"
 weapon.uiIconInactive = "hud_wep_mp5sd_inactive"
 weapon.uiIconIdle = "hud_wep_mp5sd_idle"
 weapon.fireSound = "mp5sd_fire"
+weapon.suppressed = true
 
 local bulletFactor = 0.8
 

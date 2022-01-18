@@ -36,6 +36,7 @@ g18s.uiIconIdle = "hud_wep_glock18s_idle"
 g18s.noiseTravelOverride = usp.noiseTravelOverride
 g18s.muzzleFlashShadows = usp.muzzleFlashShadows
 g18s.unique = false
+g18s.suppressed = true
 
 weapons:register(g18s, "glock18")
 game.getCampaignData("intravenous"):addLoadoutWeapon(weapons.TYPES.SECONDARY, "glock18s")
