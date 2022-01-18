@@ -12,7 +12,7 @@ register.newSoundData({
 	fadeDistance = 100, -- at what distance does the sound start fading?
 	maxDistance = 400, -- at what distance + fadeDistance do we no longer hear the sound?
 	looping = false,
-	volume = 0.2,
+	volume = 0.3,
 	pitchVariance = sounds.genericPitchVariance,
 	volumeType = sound.VOLUME_TYPES.EFFECTS
 }, 
