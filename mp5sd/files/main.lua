@@ -28,7 +28,7 @@ register.newSoundData({
 	fadeDistance = 200, -- at what distance does the sound start fading?
 	maxDistance = 500, -- at what distance + fadeDistance do we no longer hear the sound?
 	looping = false,
-	volume = 0.5,
+	volume = 0.2,
 	pitchVariance = sounds.genericPitchVariance,
 	volumeType = sound.VOLUME_TYPES.EFFECTS
 }, 
@@ -49,7 +49,14 @@ weapon.uiIcon = "hud_wep_mp5sd_active"
 weapon.uiIconInactive = "hud_wep_mp5sd_inactive"
 weapon.uiIconIdle = "hud_wep_mp5sd_idle"
 weapon.fireSound = "mp5sd_fire"
-weapon.bulletSpeed = 1000
+
+local bulletFactor = 0.8
+
+weapon.bulletSpeed = mp5.bulletSpeed * bulletFactor
+weapon.damage = mp5.damage * bulletFactor
+weapon.damageMin = mp5.damageMin * bulletFactor
+weapon.rangeMin = mp5.rangeMin * bulletFactor -- start losing damage past this range
+weapon.rangeMax = mp5.rangeMax * bulletFactor -- reach damageMin at this range
 
 weapon.muzzleFlashShadows = p320.muzzleFlashShadows
 weapon.muzzleflashConfigs = p320.muzzleflashConfigs
