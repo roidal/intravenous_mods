@@ -13,6 +13,7 @@ g18p.unique = false
 g18p.type = weapons.TYPES.PRIMARY
 g18p.maxAmmo = g18.magSize * 4
 g18p.ammoOnGive = g18p.maxAmmo
+g18p.price = 1500
 
 weapons:register(g18p, "glock18")
 game.getCampaignData("intravenous"):addLoadoutWeapon(weapons.TYPES.PRIMARY, "glock18p")
