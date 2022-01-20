@@ -4,6 +4,7 @@ if not game.modSupport or not game.modSupport.weaponMods then
 end
 
 spritesheetParser:parse("textures/bs_glock19s_ui")
+spritesheetParser:parse("textures/bs_glock19s_world")
 
 register.newSoundData({
 	name = "glock19s_fire",
@@ -33,6 +34,7 @@ g19s.config = usp.config
 g19s.uiIcon = "hud_wep_glock19s_active"
 g19s.uiIconInactive = "hud_wep_glock19s_inactive"
 g19s.uiIconIdle = "hud_wep_glock19s_idle"
+g19s.worldSprite = "world_glock19s"
 g19s.noiseTravelOverride = usp.noiseTravelOverride
 g19s.muzzleFlashShadows = usp.muzzleFlashShadows
 g19s.suppressed = true

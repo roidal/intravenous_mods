@@ -4,6 +4,7 @@ if not game.modSupport or not game.modSupport.weaponMods then
 end
 
 spritesheetParser:parse("textures/bs_glock18s_ui")
+spritesheetParser:parse("textures/bs_glock18s_world")
 
 register.newSoundData({
 	name = "glock18s_fire",
@@ -33,6 +34,7 @@ g18s.config = usp.config
 g18s.uiIcon = "hud_wep_glock18s_active"
 g18s.uiIconInactive = "hud_wep_glock18s_inactive"
 g18s.uiIconIdle = "hud_wep_glock18s_idle"
+g18s.worldSprite = "world_glock18s"
 g18s.noiseTravelOverride = usp.noiseTravelOverride
 g18s.muzzleFlashShadows = usp.muzzleFlashShadows
 g18s.unique = false

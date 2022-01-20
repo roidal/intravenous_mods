@@ -1,0 +1,1 @@
+world_glock18s = 0 0 19 8
