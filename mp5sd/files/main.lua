@@ -20,6 +20,7 @@ function deepCopy(o)
 end
 
 spritesheetParser:parse("textures/bs_mp5sd_ui")
+spritesheetParser:parse("textures/bs_mp5sd_world")
 
 register.newSoundData({
 	name = "mp5sd_fire",
@@ -50,6 +51,7 @@ weapon.uiIconInactive = "hud_wep_mp5sd_inactive"
 weapon.uiIconIdle = "hud_wep_mp5sd_idle"
 weapon.fireSound = "mp5sd_fire"
 weapon.suppressed = true
+weapon.worldSprite = "world_mp5sd"
 
 local bulletFactor = 0.8
 
