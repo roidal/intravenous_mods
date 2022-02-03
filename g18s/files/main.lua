@@ -26,6 +26,7 @@ local usp = weapons:getData("usp")
 g18s.id = "glock18s"
 g18s.name = _T("WEAPON_NAME_GLOCK18S", "Glock-18 S")
 g18s.trivia = _T("WEAPON_NAME_GLOCK18S_TRIVIA", "Silenced version of Glock-18")
+g18s.price = 3500
 g18s.NPC = false
 g18s.fireSound = "glock18s_fire"
 g18s.noiseChange = usp.noiseChange

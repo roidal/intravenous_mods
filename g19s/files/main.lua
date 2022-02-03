@@ -27,6 +27,7 @@ g19s.id = "glock19s"
 g19s.name = _T("WEAPON_NAME_GLOCK19S", "Glock-19 S")
 g19s.trivia = _T("WEAPON_NAME_GLOCK19S_TRIVIA", "Silenced version of Glock-19")
 g19s.NPC = false
+g19s.price = 1500
 g19s.fireSound = "glock19s_fire"
 g19s.noiseChange = usp.noiseChange
 g19s.noiseRadius = usp.noiseRadius * 1.1

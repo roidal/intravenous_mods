@@ -43,6 +43,7 @@ p320 = weapons:getData("p320")
 weapon.id = "mp5sd"
 weapon.name = _T("WEAPON_NAME_MP5SD", "MP5SD")
 weapon.trivia = _T("WEAPON_NAME_MP5SD_TRIVIA", "Silenced version of the MP5")
+weapon.price = 2000
 weapon.NPC = false
 weapon.noiseRadius = p320.noiseRadius * 1.1
 weapon.noiseTravelOverride = p320.noiseTravelOverride
